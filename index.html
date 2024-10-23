@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheName</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="nav-left">
+            <a href="#">My Fleet</a>
+            <a href="#">My Ships</a>
+            <a href="addShip.html">Add Ship</a>
+          </div>
+          <div class="nav-right">
+            <input
+              type="text"
+              placeholder="Search by ship name..."
+              id="searchShip"
+            />
+            <button class="search-btn" id="searchButton">Search</button>
+            <button class="clear-btn" id="clearButton">Clear</button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="content">
+        <aside class="sidebar">
+          <h3>Manage Ships</h3>
+          <div class="sort-by" id="sortButton">
+            <label for="sort-toggle">Sort by Most Expensive Ships</label>
+            <label class="switch">
+              <input type="checkbox" id="sortShips" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="count-expenses">
+            <label for="count-expenses">Count total daily expenses:</label>
+            <button class="count-btn" id="countExpenses">Count</button>
+          </div>
+          <div class="total-expenses">
+            <span>Total expenses: </span>
+            <strong id="totalExpenses">$0.00</strong>
+          </div>
+        </aside>
+
+        <main class="ship-list" id="shipList">
+          <div class="ship-card">
+            <div class="image-placeholder">Image</div>
+            <h4>Ship Name</h4>
+            <p>Description of the ship.</p>
+            <div class="timestamp">Last updated: 12 Oct 2024</div>
+            <div class="action-buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="remove-btn">Remove</button>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/index.js" type="module"></script>
+    <script src="js/dom_until.js" type="module"></script>
+  </body>
+</html>
